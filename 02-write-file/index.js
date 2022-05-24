@@ -19,8 +19,8 @@ stdin.on('data', data => {
         `${data}`,
 
         process.stdin.on('data', data => {
-            const dataString = data.toString()
-             if (dataString === 'exit\n') {
+            const dataString = data.toString().trim()
+             if (dataString === 'exit') {
                  console.log('Программа завершена');
                  process.exit();
              }
